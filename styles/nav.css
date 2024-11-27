@@ -1,0 +1,72 @@
+.navbar {
+  & > div:nth-of-type(1) {
+    padding-block: 1.6rem;
+    background-color: var(--medium);
+    color: white;
+    svg {
+      width: 1.8rem;
+      height: 1.8rem;
+      background-color: white;
+      color: #2a4775;
+      padding: 0.4rem;
+      border-radius: 50%;
+    }
+    display: flex;
+
+    justify-content: flex-end;
+    ul {
+      display: flex;
+      gap: 1.6rem;
+      li {
+        display: flex;
+        gap: 0.4rem;
+        align-items: center;
+        a {
+          display: flex;
+          gap: 0.4rem;
+          align-items: center;
+          color: white;
+        }
+      }
+    }
+  }
+  & > div:nth-of-type(2) {
+    display: flex;
+    padding-block: 1.2rem;
+    justify-content: space-between;
+
+    & > div:nth-of-type(1) {
+      img {
+        border-radius: 1.2rem;
+        border: solid 0.1rem white;
+        box-shadow: 0.4rem 0.4rem 0.5rem rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    & > div:nth-of-type(2) {
+      display: flex;
+      align-items: center;
+      ul {
+        display: flex;
+        gap: 3.2rem;
+        li {
+          a {
+            text-decoration: none;
+            color: var(--dark);
+            padding: 1.6rem;
+            &:hover {
+              background-color: var(--medium);
+              color: white;
+              border-radius: 1.2rem;
+            }
+          }
+          .active {
+            background-color: var(--medium);
+            color: white;
+            border-radius: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}

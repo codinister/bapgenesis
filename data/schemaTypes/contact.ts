@@ -53,12 +53,18 @@ export default defineType({
       type: 'string',
     }),
 
-    
-
-
     defineField({
       name: 'mainImage',
       title: 'Logo',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+
+    defineField({
+      name: 'pageheader',
+      title: 'Page image',
       type: 'image',
       options: {
         hotspot: true,

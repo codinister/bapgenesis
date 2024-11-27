@@ -1,18 +1,17 @@
-
-import client from '@/data/clientConfig';
+import client from '@/data/client';
 import { groq } from 'next-sanity';
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   try {
     const res = await client.fetch(
       groq`
-      *[_type == 'settings' && comp_name != null]{
+      *[_type == 'contact' && comp_name != null]{
     ...,
-        'comp_logo' : comp_logo.asset->url,
+        'comp_logo' : mainImage.asset->url,
         'pageheader': pageheader.asset->url,
       }
       `

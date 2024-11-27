@@ -1,0 +1,37 @@
+.home {
+  position: relative;
+  height: 100vh;
+
+  &::after {
+    content: '';
+    inset: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  & > nav {
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+
+    & > div:nth-of-type(2) {
+      a {
+        color: white!important;
+      }
+    }
+  }
+
+  & > .title-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 9999;
+    text-align: center;
+    line-height: 6.4rem;
+    & > h1 {
+      color: white;
+    }
+  }
+}
