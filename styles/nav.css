@@ -1,3 +1,7 @@
+.default-nav {
+  display: none !important;
+}
+
 .navbar {
   & > div:nth-of-type(1) {
     padding-block: 1.6rem;

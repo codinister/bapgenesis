@@ -6,7 +6,8 @@
   font-size: 62.5%;
   --light: #e3f0ff;
   --medium: #f86730;
-  --dark: #6a7798;
+  --dark: #2f4858;
+  --primary: #6a7798;
 }
 
 img{
@@ -67,3 +68,6 @@ h5 {
 @import '../styles/about';
 @import '../styles/services';
 @import '../styles/contact';
+@import '../styles/footer';
+
+

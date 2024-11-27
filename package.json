@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^6.22.5",
     "axios": "^1.7.7",
     "next": "15.0.3",
