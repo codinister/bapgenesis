@@ -1,13 +1,28 @@
+import Customerservice from '@/components/Customerservice';
 import Pageheader from '@/components/Pageheader';
 
 export default function Contact() {
   return (
     <>
-      <Pageheader title="Contact Us" subtitle="Let's connect" />
+      <Pageheader
+        title="Get in touch"
+        subtitle="Want to get in touch? We'd love to hear from you."
+      />
 
       <section className="contact">
-        <div className="container"></div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <div>
+          <div></div>
+          <div></div>
+        </div>
       </section>
+
+
+      <Customerservice />
     </>
   );
 }
