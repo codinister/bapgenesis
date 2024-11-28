@@ -7,6 +7,7 @@ import services from './services';
 import contact from './contact';
 import home from './home';
 import slider from './slider';
+import projects from './projects';
 
 export const schemaTypes = [
   about,
@@ -17,5 +18,6 @@ export const schemaTypes = [
   author,
   category,
   blockContent,
-  slider
+  slider, 
+  projects
 ];

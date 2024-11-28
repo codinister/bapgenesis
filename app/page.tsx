@@ -1,8 +1,10 @@
 'use client';
 
+import Customerservice from '@/components/Customerservice';
 import Services from '@/components/home/Services';
 import Whoweare from '@/components/home/Whoweare';
 import Nav from '@/components/nav/Nav';
+import Projects from '@/components/Projects';
 import Slider from '@/components/Slider';
 import useGetQuery from '@/data/query/useGetQuery';
 
@@ -27,6 +29,8 @@ export default function Home() {
 
       <Whoweare />
       <Services />
+      <Customerservice />
+      <Projects />
     </>
   );
 }

@@ -34,6 +34,7 @@
       }
     }
   }
+
   & > div:nth-of-type(2) {
     display: flex;
     padding-block: 1.2rem;
@@ -56,7 +57,7 @@
         li {
           a {
             text-decoration: none;
-            color: var(--dark);
+            color: white;
             padding: 1.6rem;
             &:hover {
               background-color: var(--medium);
@@ -68,6 +69,30 @@
             background-color: var(--medium);
             color: white;
             border-radius: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .stickynav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+
+    z-index: 999 !important;
+
+    & > div:nth-of-type(2) {
+      ul {
+        li {
+          a {
+            color: var(--dark) !important;
+          }
+          .active {
+            color: white !important;
           }
         }
       }

@@ -1,8 +1,8 @@
 'use client';
 
 import useGetQuery from '@/data/query/useGetQuery';
-import { GrBarChart } from 'react-icons/gr';
-import { MdOutlineManageHistory } from 'react-icons/md';
+import { GiHammerNails } from 'react-icons/gi';
+import { MdOutlineManageHistory, MdPrecisionManufacturing } from 'react-icons/md';
 
 const Services = () => {
   const data = useGetQuery('services', '/services') || [];
@@ -34,12 +34,13 @@ const Services = () => {
           <p>{oneText}</p>
         </div>
         <div>
-          <GrBarChart />
+        <MdPrecisionManufacturing />
           <h3>{twoTitle}</h3>
           <p>{twoText}</p>
         </div>
         <div>
-          <GrBarChart />
+        <GiHammerNails />
+
           <h3>{threeTitle}</h3>
           <p>{threeText}</p>
         </div>

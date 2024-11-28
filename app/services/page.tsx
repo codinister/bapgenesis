@@ -1,9 +1,13 @@
+import Pageheader from '@/components/Pageheader';
 
-
-export default function Home() {
+export default function Services() {
   return (
-    <section className="home">
-      SERVICES
-    </section>
+    <>
+      <Pageheader title="Our Services" subtitle="What we do" />
+
+      <section className="home">
+        <div className="container"></div>
+      </section>
+    </>
   );
 }

@@ -2,17 +2,17 @@
 import useGetQuery from '@/data/query/useGetQuery';
 import { GrAppsRounded, GrHome } from 'react-icons/gr';
 import { SlUser } from 'react-icons/sl';
+import BlockContent from '@sanity/block-content-to-react';
 
 const Whoweare = () => {
   const data = useGetQuery('about', '/about') || [];
 
-  let excerpt = '';
   let img = [];
   if (data.length > 0) {
-    excerpt = data[0]?.excerpt;
     img = data[0]?.image;
   }
 
+  console.log(data[0]?.body)
   return (
     <section className="whoweare">
       <div
@@ -27,7 +27,16 @@ const Whoweare = () => {
           <h4>Company Overview</h4>
           <h2>ABOUT US</h2>
         </div>
-        <div>{excerpt}</div>
+        <div>
+          {data.length > 0 ? (
+            <BlockContent
+              blocks={data[0]?.body}
+              projectid={process.env.NEXT_PUBLIC_PROJECT_ID}
+            />
+          ) : (
+            ''
+          )}
+        </div>
         <div>
           <div>
             <SlUser />

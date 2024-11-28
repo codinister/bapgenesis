@@ -1,8 +1,13 @@
+import Pageheader from '@/components/Pageheader';
 
 export default function Contact() {
   return (
-    <section className="home">
-      Contact
-    </section>
+    <>
+      <Pageheader title="Contact Us" subtitle="Let's connect" />
+
+      <section className="contact">
+        <div className="container"></div>
+      </section>
+    </>
   );
 }

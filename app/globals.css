@@ -68,3 +68,6 @@ h5 {
 @import '../styles/services';
 @import '../styles/contact';
 @import '../styles/footer';
+@import '../styles/project';
+@import '../styles/modal';
+@import '../styles/pageheader';
