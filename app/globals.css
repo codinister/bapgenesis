@@ -10,7 +10,7 @@
   --primary: #6a7798;
 }
 
-img{
+img {
   max-width: 100%;
 }
 
@@ -30,19 +30,18 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   color: #2a4775;
-  line-height: 1.6rem;
+  line-height: 2.4rem;
 }
 
 h1 {
   font-size: 6rem;
-  font-family: "Bowlby One SC", sans-serif;
+  font-family: 'Bowlby One SC', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 h2 {
   font-size: 2.488rem;
-  
 }
 
 h3 {
@@ -69,5 +68,3 @@ h5 {
 @import '../styles/services';
 @import '../styles/contact';
 @import '../styles/footer';
-
-

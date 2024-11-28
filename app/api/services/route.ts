@@ -9,7 +9,7 @@ export async function GET() {
   try {
     const res = await client.fetch(
       groq`
-      *[_type == 'about' && title != null]{
+      *[_type == 'services' && title != null]{
       ..., 
       "body": body[]{
       ..., 

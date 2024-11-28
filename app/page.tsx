@@ -1,5 +1,6 @@
 'use client';
 
+import Services from '@/components/home/Services';
 import Whoweare from '@/components/home/Whoweare';
 import Nav from '@/components/nav/Nav';
 import Slider from '@/components/Slider';
@@ -25,6 +26,7 @@ export default function Home() {
       </section>
 
       <Whoweare />
+      <Services />
     </>
   );
 }
