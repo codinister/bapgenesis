@@ -9,7 +9,9 @@ const Footer = () => {
 
   const date = new Date().getFullYear();
 
-  console.log(data);
+
+
+ 
   return (
     <footer>
       <div className="container">
@@ -64,6 +66,7 @@ const Footer = () => {
             ''
           )}
         </div>
+
       </div>
     </footer>
   );
