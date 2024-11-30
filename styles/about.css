@@ -107,7 +107,7 @@
   }
 
   .about {
-    padding-block: 1.6rem;
+    padding: 1.6rem;
     & > h2 {
       text-align: center;
       margin-bottom: 1.6rem;
@@ -119,6 +119,7 @@
 
     & > div {
       & > div {
+        margin-bottom: 6.4rem;
         & > div:nth-of-type(1) {
           height: 30rem;
           border-radius: 2.4rem;
