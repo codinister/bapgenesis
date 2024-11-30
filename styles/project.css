@@ -1,82 +1,145 @@
-.projects {
-padding-block: 6.4rem; 
-background-color: var(--light);
-h2{
-  text-align: center; 
-  margin-bottom: 4rem;
-}
-
-& > div{
-  & > div:nth-of-type(1) {
-    display: flex;
-    flex-wrap: wrap;
-    & > div:nth-of-type(1) {
-      flex-basis: 10rem;
-      flex-grow: 1;
-      height: 30rem;
-      background-color: var(--dark);
-      color: white;
-      font-size: 1.8rem;
-      padding: 4.8rem;
-      display: flex; 
-      align-items: center;
+@media (min-width: 35em) {
+  .projects {
+    padding-block: 6.4rem;
+    background-color: var(--light);
+    h2 {
+      text-align: center;
+      margin-bottom: 4rem;
     }
-    & > div:nth-of-type(2) {
-      flex-basis: 20rem;
-      flex-grow: 1;
-      height: 30rem;
+
+    & > div {
+      & > div:nth-of-type(1) {
+        display: flex;
+        flex-wrap: wrap;
+        & > div:nth-of-type(1) {
+          flex-basis: 10rem;
+          flex-grow: 1;
+          height: 30rem;
+          background-color: var(--dark);
+          color: white;
+          font-size: 1.8rem;
+          padding: 4.8rem;
+          display: flex;
+          align-items: center;
+        }
+        & > div:nth-of-type(2) {
+          flex-basis: 20rem;
+          flex-grow: 1;
+          height: 30rem;
+        }
+      }
+
+      & > div:nth-of-type(2) {
+        display: flex;
+        flex-wrap: wrap;
+        & > div:nth-of-type(1) {
+          flex-basis: 40rem;
+          flex-grow: 1;
+          height: 30rem;
+        }
+        & > div:nth-of-type(2) {
+          flex-basis: 10rem;
+          flex-grow: 1;
+          height: 30rem;
+          background-color: var(--medium);
+          color: white;
+          font-size: 1.8rem;
+          padding: 4.8rem;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      & > div:nth-of-type(3) {
+        display: flex;
+        flex-wrap: wrap;
+        & > div:nth-of-type(1) {
+          flex-basis: 10rem;
+          flex-grow: 1;
+          height: 30rem;
+          background-color: white;
+          color: var(--dark);
+          font-size: 1.8rem;
+          padding: 4.8rem;
+          display: flex;
+          align-items: center;
+        }
+        & > div:nth-of-type(2) {
+          flex-basis: 50rem;
+          flex-grow: 1;
+          height: 30rem;
+        }
+      }
     }
   }
 
+  .show-image-bx {
+    height: 40rem;
+    width: 50rem;
+  }
+}
 
 
-  & > div:nth-of-type(2) {
-    display: flex;
-    flex-wrap: wrap;
-    & > div:nth-of-type(1) {
-      flex-basis: 40rem;
-      flex-grow: 1;
-      height: 30rem;
+
+
+
+
+
+
+
+
+
+@media (max-width: 35em) {
+  .projects {
+    padding: 1.6rem;
+    background-color: var(--light);
+    h2 {
+      text-align: center;
+      margin-bottom: 2.4rem;
     }
-    & > div:nth-of-type(2) {
-      flex-basis: 10rem;
-      flex-grow: 1;
-      height: 30rem;
-      background-color: var(--medium);
-      color: white;
-      font-size: 1.8rem;
-      padding: 4.8rem;
-      display: flex; 
-      align-items: center;
+
+    & > div {
+      & > div:nth-of-type(1) {
+        & > div:nth-of-type(1) {
+  
+          background-color: var(--dark);
+          color: white;
+          font-size: 1.8rem;
+          padding: 1.6rem;
+        }
+        & > div:nth-of-type(2) {
+          height: 30rem;
+        }
+      }
+
+      & > div:nth-of-type(2) {
+        & > div:nth-of-type(1) {
+          height: 30rem;
+        }
+        & > div:nth-of-type(2) {
+          background-color: var(--medium);
+          color: white;
+          font-size: 1.8rem;
+          padding: 4.8rem;
+        }
+      }
+
+      & > div:nth-of-type(3) {
+        & > div:nth-of-type(1) {
+          background-color: white;
+          color: var(--dark);
+          font-size: 1.8rem;
+          padding: 4.8rem;
+        }
+        & > div:nth-of-type(2) {
+          height: 30rem;
+        }
+      }
     }
   }
 
-
-
-  & > div:nth-of-type(3) {
-    display: flex;
-    flex-wrap: wrap;
-    & > div:nth-of-type(1) {
-      flex-basis: 10rem;
-      flex-grow: 1;
-      height: 30rem;
-      background-color: white;
-      color: var(--dark);
-      font-size: 1.8rem;
-      padding: 4.8rem;
-      display: flex; 
-      align-items: center;
-    }
-    & > div:nth-of-type(2) {
-      flex-basis: 50rem;
-      flex-grow: 1;
-      height: 30rem;
-    }
+  .show-image-bx {
+    height: 40rem;
+    width: 50rem;
   }
-}
-}
-
-.show-image-bx{
-  height: 40rem;
-  width: 50rem;
 }

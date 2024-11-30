@@ -1,6 +1,4 @@
-.contact-wrapper {
-  position: relative;
-
+@media (min-width: 35em) {
   .customer-service {
     position: relative;
     height: 25rem;
@@ -41,7 +39,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 4.8rem;
-margin-top: 6.4rem;
+      margin-top: 6.4rem;
       width: 100%;
       & > div {
         flex: 1 1 10rem;
@@ -87,6 +85,84 @@ margin-top: 6.4rem;
         flex-grow: 1;
         background-color: white;
         padding: 4rem;
+
+        p {
+          margin-block: 2.4rem;
+        }
+
+        strong {
+          display: block;
+          margin-bottom: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 35em) {
+  .customer-service {
+    position: relative;
+    padding: 1.6rem;
+
+    & > div:nth-of-type(1) {
+      height: 25rem;
+    }
+
+    & > div:nth-of-type(2) {
+      box-shadow: -1rem 0 3rem rgba(0, 0, 0, 0.2);
+
+      & > div {
+        padding: 1.6rem;
+        h2 {
+          margin-block: 1.6rem;
+        }
+        span {
+          color: var(--medium);
+        }
+      }
+    }
+  }
+
+  .contact {
+    padding: 1.6rem;
+    & > div:nth-of-type(1) {
+      margin-top: 6.4rem;
+      & > div {
+        height: 35rem;
+        background-color: white;
+        text-align: center;
+        padding: 1.6rem;
+        svg {
+          font-size: 4.8rem;
+          display: block;
+          margin-inline: auto;
+          margin-bottom: 3.2rem;
+        }
+        strong {
+          margin-bottom: 1.6rem;
+        }
+        h2 {
+          margin-top: 3.2rem;
+        }
+        box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    & > div:nth-of-type(2) {
+      margin-top: 6.4rem;
+      margin-bottom: 6.4rem;
+      & > div {
+        height: 35rem;
+      }
+
+      & > div:nth-of-type(1) {
+        iframe {
+          border: none;
+        }
+      }
+      & > div:nth-of-type(2) {
+        background-color: white;
+        padding: 1.6rem;
 
         p {
           margin-block: 2.4rem;

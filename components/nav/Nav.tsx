@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 
 const Nav = () => {
   const [sticky, setSticky] = useState(false);
+  const [show, setShow] = useState('');
 
   useEffect(() => {
     document.addEventListener('scroll', handleScroll);
@@ -21,8 +22,7 @@ const Nav = () => {
 
     if (num > 150) {
       setSticky(true);
-    }
-    else{
+    } else {
       setSticky(false);
     }
   };
@@ -37,10 +37,32 @@ const Nav = () => {
     ''
   );
 
+  let phone = '';
+  let comp_name = '';
+  let location = '';
+  let facebook = '';
+  let email = '';
+
+  if (data.length > 0) {
+    phone = data[0]?.phone1;
+    comp_name = data[0]?.comp_name;
+    location = data[0]?.location;
+    facebook = data[0]?.facebook;
+    email = data[0]?.email;
+  }
+
   const path = usePathname();
 
   return (
     <nav className="navbar">
+      <Image
+        src="/hamburger.jpg"
+        className="hamburger"
+        width="30"
+        height="30"
+        alt=""
+        onClick={() => setShow('show')}
+      />
       <div className="container">
         <ul>
           <li>
@@ -60,26 +82,39 @@ const Nav = () => {
           </li>
         </ul>
       </div>
-      <div className={sticky ? 'stickynav container' : ' container'}>
+      <div
+        className={
+          sticky ? `stickynav container ${show} menu-links` : `${show} menu-links container`
+        }
+      >
         <div>
-          <Link href="/">
-          {logo}
+          <Link href="/" onClick={() => setShow('hide')}>
+            {logo}
           </Link>
-          </div>
+        </div>
         <div>
           <ul>
             <li>
-              <Link href="/" className={path === '/' ? 'active' : ''}>
+              <Link
+                href="/"
+                onClick={() => setShow('hide')}
+                className={path === '/' ? 'active' : ''}
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className={path === '/about' ? 'active' : ''}>
+              <Link
+                href="/about"
+                onClick={() => setShow('hide')}
+                className={path === '/about' ? 'active' : ''}
+              >
                 About
               </Link>
             </li>
             <li>
               <Link
+                onClick={() => setShow('hide')}
                 href="/services"
                 className={path === '/services' ? 'active' : ''}
               >
@@ -88,6 +123,7 @@ const Nav = () => {
             </li>
             <li>
               <Link
+                onClick={() => setShow('hide')}
                 href="/contact"
                 className={path === '/contact' ? 'active' : ''}
               >
@@ -95,10 +131,34 @@ const Nav = () => {
               </Link>
             </li>
           </ul>
+
+          <ul className="mobile-contact-details">
+            <li>
+              <h2>{comp_name}</h2>
+              <h4>{location}</h4>
+            </li>
+            <li>
+              <FaPhoneAlt /> {phone}
+            </li>
+            <li>
+              <FaEnvelope /> {email}
+            </li>
+            <li>
+              <a href={facebook} title="Facebook"><FaFacebook /> Facebook</a>
+            </li>
+            <li>
+              <a href={data[0]?.facebook} title="Facebook">
+                <FaFacebook /> Facebook
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 
-      <div></div>
+      <div
+        onClick={() => setShow('hide')}
+        className={`menu-links-overlay ${show}`}
+      ></div>
     </nav>
   );
 };
